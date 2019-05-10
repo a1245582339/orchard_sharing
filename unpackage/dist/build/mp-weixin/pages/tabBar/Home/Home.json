@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "共享果园",
+  "usingComponents": {
+    "van-row": "/wxcomponents/vant/dist/row/index",
+    "van-col": "/wxcomponents/vant/dist/col/index"
+  }
+}

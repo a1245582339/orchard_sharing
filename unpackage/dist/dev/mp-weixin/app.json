@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/tabBar/Home/Home",
+    "pages/tabBar/Recommend/Recommend",
+    "pages/tabBar/Search/Search",
+    "pages/tabBar/Me/Me"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#F8F8F8",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/Home/Home",
+        "iconPath": "static/home.png",
+        "selectedIconPath": "static/homeS.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tabBar/Recommend/Recommend",
+        "iconPath": "static/recommend.png",
+        "selectedIconPath": "static/recommendS.png",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/tabBar/Search/Search",
+        "iconPath": "static/search.png",
+        "selectedIconPath": "static/searchS.png",
+        "text": "搜索"
+      },
+      {
+        "pagePath": "pages/tabBar/Me/Me",
+        "iconPath": "static/me.png",
+        "selectedIconPath": "static/meS.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap80.json"
+}

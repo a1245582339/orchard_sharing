@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "搜索",
+  "usingComponents": {
+    "van-search": "/wxcomponents/vant/dist/search/index",
+    "uni-drawer": "/components/uni-drawer/uni-drawer"
+  }
+}

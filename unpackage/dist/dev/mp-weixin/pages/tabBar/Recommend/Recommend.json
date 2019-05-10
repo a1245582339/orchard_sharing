@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "推荐",
+  "usingComponents": {
+    "van-search": "/wxcomponents/vant/dist/search/index"
+  }
+}

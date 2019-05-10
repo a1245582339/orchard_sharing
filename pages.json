@@ -1,0 +1,116 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tabBar/Home/Home",
+			"style": {
+				"navigationBarTitleText": "共享果园",
+				"usingComponents" : {  
+				    "van-notice-bar": "/wxcomponents/vant/dist/notice-bar/index",
+					"van-panel": "/wxcomponents/vant/dist/panel/index"
+				},
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue534",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px",
+							"color": "#999999"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/Recommend/Recommend",
+			"style": {
+				"navigationBarTitleText": "推荐",
+				"usingComponents" : {  
+				   "van-search": "/wxcomponents/vant/dist/search/index"  
+				},
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue534",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px",
+							"color": "#999999"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/Search/Search",
+			"style": {
+				"usingComponents" : {  
+			   "van-search": "/wxcomponents/vant/dist/search/index"  
+			},
+				"navigationBarTitleText": "搜索",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue534",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px",
+							"color": "#999999"
+						}]
+					}
+				}
+			}}, 
+		{
+			"path": "pages/tabBar/Me/Me",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"usingComponents" : {  
+				   "van-search": "/wxcomponents/vant/dist/search/index"  
+				},
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue534",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px",
+							"color": "#999999"
+						}]
+					}
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+			"color": "#7A7E83",
+			"selectedColor": "#007AFF",
+			"borderStyle": "black",
+			"backgroundColor": "#F8F8F8",
+			"list": [{
+					"pagePath": "pages/tabBar/Home/Home",
+					"iconPath": "static/home.png",
+					"selectedIconPath": "static/homeS.png",
+					"text": "首页"
+				},
+				{
+					"pagePath": "pages/tabBar/Recommend/Recommend",
+					"iconPath": "static/recommend.png",
+					"selectedIconPath": "static/recommendS.png",
+					"text": "推荐"
+				}, {
+					"pagePath": "pages/tabBar/Search/Search",
+					"iconPath": "static/search.png",
+					"selectedIconPath": "static/searchS.png",
+					"text": "搜索"
+				}, {
+					"pagePath": "pages/tabBar/Me/Me",
+					"iconPath": "static/me.png",
+					"selectedIconPath": "static/meS.png",
+					"text": "个人中心"
+				}
+			]
+		}
+	
+}

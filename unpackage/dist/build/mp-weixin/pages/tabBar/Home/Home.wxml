@@ -1,0 +1,1 @@
+<view bind:__l="__l"><van-row vue-slots="{{['default']}}"><van-col span="8" data-com-type="wx" vue-slots="{{['default']}}">span: 8</van-col><van-col span="8" data-com-type="wx" vue-slots="{{['default']}}">span: 8</van-col><van-col span="8" data-com-type="wx" vue-slots="{{['default']}}">span: 8</van-col></van-row></view>
