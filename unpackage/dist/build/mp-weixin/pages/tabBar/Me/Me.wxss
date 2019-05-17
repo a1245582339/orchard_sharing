@@ -1,19 +1,49 @@
-
-page {
-	height: auto;
-	min-height: 100%;
+.user {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20rpx;
+  padding: 10rpx 20rpx;
 }
-.uni-card {
-	-webkit-box-shadow: none;
-	        box-shadow: none;
+.user .avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
 }
-.uni-list:after {
-	height: 0;
+.user .name {
+  margin-left: 70rpx;
 }
-.uni-list:before {
-	height: 0;
+.menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin-top: 100rpx;
 }
-.uni-hello-text {
-	word-break: break-all;
+.menu .menu-item {
+  height: 120rpx;
+  width: 120rpx;
+  text-align: center;
+}
+.menu .menu-item .icon {
+  color: #1ea7eb;
+  font-size: 50rpx;
+}
+.menu .menu-item .label {
+  color: #555;
+}
+.menu .menu-item.border {
+  border-right: 1px solid #ccc;
+}
+.list {
+  margin-top: 50rpx;
 }
 

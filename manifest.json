@@ -1,5 +1,5 @@
 {
-    "name" : "uniapp2",
+    "name" : "test",
     "appid" : "__UNI__37E37E9",
     "description" : "",
     "versionName" : "1.0.0",
@@ -55,10 +55,10 @@
     /* 快应用特有相关 */
     "mp-weixin" : {
         /* 小程序特有相关 */
-        "appid" : "wxcb03d68360799de9",
+        "appid" : "wx9b603600812c37d2",
         "setting" : {
             "urlCheck" : false,
-            "es6" : false,
+            "es6" : true,
             "minified" : true
         },
         "usingComponents" : true

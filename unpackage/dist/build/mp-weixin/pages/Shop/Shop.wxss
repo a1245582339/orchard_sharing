@@ -1,0 +1,7 @@
+.header {
+  margin-top: 15rpx;
+}
+.list {
+  margin-top: 20rpx;
+}
+

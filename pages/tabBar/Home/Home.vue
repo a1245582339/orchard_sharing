@@ -1,6 +1,6 @@
 <template>
 	<view class="uni-padding-wrap uni-common-pb">
-		<uni-grid column-num="2" :show-out-border="false" :options="[
+		<uni-grid column-num="2" :show-out-border="false" @click="onTapGrid" :options="[
 			{image:'https://img-cdn-qiniu.dcloud.net.cn/img/shu.png',text:'采摘园'},
 			{image:'https://img-cdn-qiniu.dcloud.net.cn/img/lindang.png',text:'果树养成小游戏'}]">
 		</uni-grid>
@@ -15,10 +15,9 @@
 			</swiper>
 		</view>
 		<view class="uni-list">
-			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-for="(value,key) in list" :key="key">
+			<view @tap="toDetail(value.id)" class="uni-list-cell" hover-class="uni-list-cell-hover" v-for="(value,key) in list" :key="key">
 				<view class="uni-media-list">
-					<view class="uni-media-list-logo">
-						<image :src="value.img"></image>
+					<view class="uni-media-list-logo" :style="{backgroundImage: `url(${value.img})`, backgroundSize: 'cover'}">
 					</view>
 					<view class="uni-media-list-body">
 						<view class="uni-media-list-text-top">{{value.title}}</view>
@@ -38,46 +37,70 @@
 		data() {
 			return {
 				msg: [
-					'【活动】首充一百送菜虚鲲专属宝箱，百分百开出神兽，什么谢广鲲都是渣渣！！！',
-					'【公告】感谢金主充钱1000万！在贪玩蓝月的路上你将是最强的！！！',
-					'【通知】开局一条狗，装备全靠打，无职业、无等级、无副本，更多玩法等你来！'
+					'【活动】玩游戏送水果！',
+					'【公告】登陆你的账号，初始系统会每一个人送一棵果树！！',
+					'【通知】起始地果树水滴值是零，每天都可以免费领取一滴水用于果树的成长！'
 				],
 				list: [{
-						title: "幸福",
-						content: "能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？",
-						img: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg?imageView2/3/w/200/h/100/q/90"
+						title: "给爱吃水果的你一份水果应季时令表",
+						content: "一直都觉得爱吃水果的人都很可爱，毕竟水果不是饭，不是刚需。也不是零食，不是撕开袋子就能吃，不是打发时间。",
+						img: "http://prir30avz.bkt.clouddn.com/art1_1.jpg",
+						id: '1'
 					}, {
-						title: "木屋",
-						content: "想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖。",
-						img: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/muwu.jpg?imageView2/3/w/200/h/100/q/90"
+						title: "水果养生小常识",
+						content: "木瓜含木瓜酵素，有助于分解并加强蛋白质吸收，可缓解消化不良和胃炎，木瓜也是健脾养胃、治胃痛的好食物。",
+						img: "http://prir30avz.bkt.clouddn.com/art2_1.jpg",
+						id: '2'
 					}, {
-						title: "CBD",
-						content: "烤炉模式的城，到黄昏，如同打翻的调色盘一般。",
-						img: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/cbd.jpg?imageView2/3/w/200/h/100/q/90"
+						title: "给爱吃水果的你一份水果应季时令表",
+						content: "一直都觉得爱吃水果的人都很可爱，毕竟水果不是饭，不是刚需。也不是零食，不是撕开袋子就能吃，不是打发时间。",
+						img: "http://prir30avz.bkt.clouddn.com/art1_1.jpg",
+						id: '1'
 					}, {
-						title: "木屋",
-						content: "想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖。",
-						img: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/muwu.jpg?imageView2/3/w/200/h/100/q/90"
+						title: "水果养生小常识",
+						content: "木瓜含木瓜酵素，有助于分解并加强蛋白质吸收，可缓解消化不良和胃炎，木瓜也是健脾养胃、治胃痛的好食物。",
+						img: "http://prir30avz.bkt.clouddn.com/art2_1.jpg",
+						id: '2'
 					}, {
-						title: "CBD",
-						content: "烤炉模式的城，到黄昏，如同打翻的调色盘一般。",
-						img: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/cbd.jpg?imageView2/3/w/200/h/100/q/90"
+						title: "给爱吃水果的你一份水果应季时令表",
+						content: "一直都觉得爱吃水果的人都很可爱，毕竟水果不是饭，不是刚需。也不是零食，不是撕开袋子就能吃，不是打发时间。",
+						img: "http://prir30avz.bkt.clouddn.com/art1_1.jpg",
+						id: '1'
 					}, {
-						title: "木屋",
-						content: "想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖。",
-						img: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/muwu.jpg?imageView2/3/w/200/h/100/q/90"
+						title: "水果养生小常识",
+						content: "木瓜含木瓜酵素，有助于分解并加强蛋白质吸收，可缓解消化不良和胃炎，木瓜也是健脾养胃、治胃痛的好食物。",
+						img: "http://prir30avz.bkt.clouddn.com/art2_1.jpg",
+						id: '2'
 					}, {
-						title: "CBD",
-						content: "烤炉模式的城，到黄昏，如同打翻的调色盘一般。",
-						img: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/cbd.jpg?imageView2/3/w/200/h/100/q/90"
+						title: "给爱吃水果的你一份水果应季时令表",
+						content: "一直都觉得爱吃水果的人都很可爱，毕竟水果不是饭，不是刚需。也不是零食，不是撕开袋子就能吃，不是打发时间。",
+						img: "http://prir30avz.bkt.clouddn.com/art1_1.jpg",
+						id: '1'
 					}, {
-						title: "木屋",
-						content: "想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖。",
-						img: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/muwu.jpg?imageView2/3/w/200/h/100/q/90"
+						title: "水果养生小常识",
+						content: "木瓜含木瓜酵素，有助于分解并加强蛋白质吸收，可缓解消化不良和胃炎，木瓜也是健脾养胃、治胃痛的好食物。",
+						img: "http://prir30avz.bkt.clouddn.com/art2_1.jpg",
+						id: '2'
 					}, {
-						title: "CBD",
-						content: "烤炉模式的城，到黄昏，如同打翻的调色盘一般。",
-						img: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/cbd.jpg?imageView2/3/w/200/h/100/q/90"
+						title: "给爱吃水果的你一份水果应季时令表",
+						content: "一直都觉得爱吃水果的人都很可爱，毕竟水果不是饭，不是刚需。也不是零食，不是撕开袋子就能吃，不是打发时间。",
+						img: "http://prir30avz.bkt.clouddn.com/art1_1.jpg",
+						id: '1'
+					}, {
+						title: "水果养生小常识",
+						content: "木瓜含木瓜酵素，有助于分解并加强蛋白质吸收，可缓解消化不良和胃炎，木瓜也是健脾养胃、治胃痛的好食物。",
+						img: "http://prir30avz.bkt.clouddn.com/art2_1.jpg",
+						id: '2'
+					}, {
+						title: "给爱吃水果的你一份水果应季时令表",
+						content: "一直都觉得爱吃水果的人都很可爱，毕竟水果不是饭，不是刚需。也不是零食，不是撕开袋子就能吃，不是打发时间。",
+						img: "http://prir30avz.bkt.clouddn.com/art1_1.jpg",
+						id: '1'
+					}, {
+						title: "水果养生小常识",
+						content: "木瓜含木瓜酵素，有助于分解并加强蛋白质吸收，可缓解消化不良和胃炎，木瓜也是健脾养胃、治胃痛的好食物。",
+						img: "http://prir30avz.bkt.clouddn.com/art2_1.jpg",
+						id: '2'
 					}
 				]
 			}
@@ -104,13 +127,24 @@
 			this.leaveSetTabBarPage()
 		},
 		methods: {
-			goDetailPage(e) {
-				uni.navigateTo({
-					url: url
-				})
-			},
 			leaveSetTabBarPage() {
 				this.showSetTabBarPage = false
+			},
+			onTapGrid (e) {
+				if (e.index === 0) {
+					uni.switchTab({
+						url: '/pages/tabBar/Search/Search'
+					})
+				} else if (e.index === 1) {
+					uni.navigateTo({
+						url: '/pages/tabBar/Home/Game'
+					});
+				}
+			},
+			toDetail (id) {
+				uni.navigateTo({
+					url: '/pages/tabBar/Home/article/art' + id
+				});
 			}
 		}
 	}

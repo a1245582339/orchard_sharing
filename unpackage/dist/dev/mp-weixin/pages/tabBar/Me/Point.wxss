@@ -1,0 +1,29 @@
+.header {
+  text-align: center;
+  height: 300rpx;
+  padding-top: 50rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fb5838), to(#fb3750));
+  background: -o-linear-gradient(#fb5838, #fb3750);
+  background: linear-gradient(#fb5838, #fb3750);
+  color: #fff;
+  position: relative;
+}
+.header .toShop {
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+}
+.header .toShop text {
+  font-size: 20rpx;
+  -webkit-text-decoration: #fff;
+          text-decoration: #fff;
+}
+.header .point {
+  font-size: 60rpx;
+}
+.header .btn {
+  margin-top: 20rpx;
+}
+

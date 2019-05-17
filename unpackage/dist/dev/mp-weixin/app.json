@@ -3,7 +3,21 @@
     "pages/tabBar/Home/Home",
     "pages/tabBar/Recommend/Recommend",
     "pages/tabBar/Search/Search",
-    "pages/tabBar/Me/Me"
+    "pages/tabBar/Me/Me",
+    "pages/tabBar/Home/article/art1",
+    "pages/tabBar/Home/article/art2",
+    "pages/tabBar/Home/Game",
+    "pages/tabBar/Me/Coupon",
+    "pages/tabBar/Me/Point",
+    "pages/tabBar/Me/Pending",
+    "pages/tabBar/Me/Paid",
+    "pages/tabBar/Me/Logistics",
+    "pages/tabBar/Me/Order",
+    "pages/tabBar/Me/Address",
+    "pages/tabBar/Me/AddressDetail",
+    "pages/tabBar/Me/Collection",
+    "pages/tabBar/Me/History",
+    "pages/Shop/Shop"
   ],
   "subPackages": [],
   "window": {
@@ -45,5 +59,5 @@
     ]
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap80.json"
+  "sitemapLocation": "sitemap78.json"
 }

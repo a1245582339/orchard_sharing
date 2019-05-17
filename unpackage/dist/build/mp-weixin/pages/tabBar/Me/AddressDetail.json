@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "我的地址",
+  "usingComponents": {
+    "van-field": "/wxcomponents/vant/dist/field/index",
+    "van-button": "/wxcomponents/vant/dist/button/index",
+    "van-cell": "/wxcomponents/vant/dist/cell/index",
+    "van-dialog": "/wxcomponents/vant/dist/dialog/index",
+    "van-picker": "/wxcomponents/vant/dist/picker/index",
+    "van-toast": "/wxcomponents/vant/dist/toast/index",
+    "uni-popup": "/components/uni-popup/uni-popup"
+  }
+}

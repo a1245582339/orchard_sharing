@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "待收货",
+  "usingComponents": {
+    "van-button": "/wxcomponents/vant/dist/button/index",
+    "van-cell": "/wxcomponents/vant/dist/cell/index",
+    "van-card": "/wxcomponents/vant/dist/card/index"
+  }
+}

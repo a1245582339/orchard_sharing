@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "店铺详情",
+  "usingComponents": {
+    "van-cell": "/wxcomponents/vant/dist/cell/index",
+    "van-rate": "/wxcomponents/vant/dist/rate/index",
+    "van-icon": "/wxcomponents/vant/dist/icon/index",
+    "van-card": "/wxcomponents/vant/dist/card/index",
+    "van-tag": "/wxcomponents/vant/dist/tag/index"
+  }
+}

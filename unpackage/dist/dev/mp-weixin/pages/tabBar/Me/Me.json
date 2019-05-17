@@ -1,6 +1,8 @@
 {
   "navigationBarTitleText": "个人中心",
   "usingComponents": {
-    "van-search": "/wxcomponents/vant/dist/search/index"
+    "van-icon": "/wxcomponents/vant/dist/icon/index",
+    "uni-list": "/components/uni-list/uni-list",
+    "uni-list-item": "/components/uni-list-item/uni-list-item"
   }
 }

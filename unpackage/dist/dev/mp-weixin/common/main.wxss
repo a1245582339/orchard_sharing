@@ -1149,6 +1149,7 @@ radio-group label, checkbox-group label{
 .uni-comment-date view{color:#666666; font-size:24rpx; line-height:38rpx;}
 .uni-comment-content{line-height:1.6em; font-size:28rpx; padding:8rpx 0;}
 .uni-comment-replay-btn{background:#FFF; font-size:24rpx; line-height:28rpx; padding:5rpx 20rpx; border-radius:30rpx; color:#333 !important; margin:0 10rpx;}
+.uni-comment-img image{height: 130rpx; width: 130rpx; margin-right: 20rpx;}
 
 /* swiper msg */
 .uni-swiper-msg{width:100%; padding:12rpx 0; -webkit-flex-wrap:nowrap; -ms-flex-wrap:nowrap; flex-wrap:nowrap; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex;}
@@ -1636,6 +1637,31 @@ radio-group label, checkbox-group label{
         -ms-transform: translateY(50%);
             transform: translateY(50%);
 }
+.stamp {width: 98%;height: 300rpx;padding: 20rpx 10rpx;position: relative;overflow: hidden;}
+.stamp:before {content: '';position: absolute;top:0;bottom:0;left:10rpx;right:10rpx;z-index: -1;}
+.stamp:after {content: '';position: absolute;left: 10rpx;top: 10rpx;right: 10rpx;bottom: 10rpx;-webkit-box-shadow: 0 0 20rpx 1rpx rgba(0, 0, 0, 0.5);box-shadow: 0 0 20rpx 1rpx rgba(0, 0, 0, 0.5);z-index: -2;}
+.stamp ._i{position: absolute;right: -15%;top: 100rpx;height: 400rpx;width: 800rpx;background-color: rgba(255,255,255,.15);-webkit-transform: rotate(-30deg);-ms-transform: rotate(-30deg);transform: rotate(-30deg);}
+.stamp .par{float: left;padding: 16rpx 15rpx;width: 60%;height: 80%;border-right:2rpx dashed rgba(255,255,255,.3);text-align: left;}
+.stamp .par .content{color:#fff;}
+.stamp .par text{font-size: 50rpx;color:#fff;margin-right: 5rpx;}
+.stamp .par .sign{font-size: 34rpx;}
+.stamp .par ._sub{position: relative;top:-5rpx;color:rgba(255,255,255,.8);}
+.stamp .copy{display: inline-block;padding:21rpx 14rpx;width:30%;vertical-align: text-bottom;font-size: 30rpx;color:rgb(255,255,255);text-align: center;padding-top: 40rpx;}
+.stamp .copy .content{font-size: 30rpx;margin-top: 15rpx;}
+.stamp01{background: #50ADD3;background: -o-radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5rpx, #50ADD3 5rpx);background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5rpx, #50ADD3 5rpx);background-size: 15rpx 15rpx;background-position: 9rpx 3rpx;}
+.stamp01:before{background-color:#50ADD3;}
+.stamp02{background: #ccc;background: -o-radial-gradient(transparent 0, transparent 5rpx, #ccc 5rpx);background: radial-gradient(transparent 0, transparent 5rpx, #ccc 5rpx);background-size: 15rpx 15rpx;background-position: 9rpx 3rpx;}
+.stamp02:before{background-color:#ccc;}
+.stamp03{background: #7EAB1E;background: -o-radial-gradient(transparent 0, transparent 5rpx, #7EAB1E 5rpx);background: radial-gradient(transparent 0, transparent 5rpx, #7EAB1E 5rpx);background-size: 15rpx 15rpx;background-position: 9rpx 3rpx;}
+.stamp03:before{background-color:#7EAB1E;}
+.stamp03 .copy{padding: 10rpx 6rpx 10rpx 12rpx;font-size: 24rpx;}
+.stamp03 .copy ._p{font-size: 14rpx;margin-top: 5rpx;margin-bottom: 8rpx;}
+.stamp03 .copy ._a{background-color:#fff;color:#333;font-size: 14rpx;text-decoration:none;padding:5rpx 10rpx;border-radius:3rpx;display: block;}
+.stamp04{width: 390rpx;background: #50ADD3;background: -o-radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 4rpx, #50ADD3 4rpx);background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 4rpx, #50ADD3 4rpx);background-size: 12rpx 8rpx;background-position: -5rpx 10rpx;}
+.stamp04:before{background-color:#50ADD3;left: 5rpx;right: 5rpx;}
+.stamp04 .copy{padding: 10rpx 6rpx 10rpx 12rpx;font-size: 24rpx;}
+.stamp04 .copy ._p{font-size: 14rpx;margin-top: 5rpx;margin-bottom: 8rpx;}
+.stamp04 .copy ._a{background-color:#fff;color:#333;font-size: 14rpx;text-decoration:none;padding:5rpx 10rpx;border-radius:3rpx;display: block;}
 
 /*每个页面公共css */
 

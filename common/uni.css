@@ -891,6 +891,7 @@ radio-group label, checkbox-group label{
 .uni-comment-date view{color:#666666; font-size:24upx; line-height:38upx;}
 .uni-comment-content{line-height:1.6em; font-size:28upx; padding:8rpx 0;}
 .uni-comment-replay-btn{background:#FFF; font-size:24upx; line-height:28upx; padding:5rpx 20upx; border-radius:30upx; color:#333 !important; margin:0 10upx;}
+.uni-comment-img image{height: 130upx; width: 130upx; margin-right: 20upx;}
 
 /* swiper msg */
 .uni-swiper-msg{width:100%; padding:12rpx 0; flex-wrap:nowrap; display:flex;}
@@ -1445,3 +1446,29 @@ radio-group label, checkbox-group label{
     left: 0;
     transform: translateY(50%);
 }
+
+.stamp {width: 98%;height: 300upx;padding: 20upx 10upx;position: relative;overflow: hidden;}
+.stamp:before {content: '';position: absolute;top:0;bottom:0;left:10upx;right:10upx;z-index: -1;}
+.stamp:after {content: '';position: absolute;left: 10upx;top: 10upx;right: 10upx;bottom: 10upx;box-shadow: 0 0 20upx 1upx rgba(0, 0, 0, 0.5);z-index: -2;}
+.stamp i{position: absolute;right: -15%;top: 100upx;height: 400upx;width: 800upx;background-color: rgba(255,255,255,.15);transform: rotate(-30deg);}
+.stamp .par{float: left;padding: 16upx 15upx;width: 60%;height: 80%;border-right:2upx dashed rgba(255,255,255,.3);text-align: left;}
+.stamp .par .content{color:#fff;}
+.stamp .par text{font-size: 50upx;color:#fff;margin-right: 5upx;}
+.stamp .par .sign{font-size: 34upx;}
+.stamp .par sub{position: relative;top:-5upx;color:rgba(255,255,255,.8);}
+.stamp .copy{display: inline-block;padding:21upx 14upx;width:30%;vertical-align: text-bottom;font-size: 30upx;color:rgb(255,255,255);text-align: center;padding-top: 40upx;}
+.stamp .copy .content{font-size: 30upx;margin-top: 15upx;}
+.stamp01{background: #50ADD3;background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5upx, #50ADD3 5upx);background-size: 15upx 15upx;background-position: 9upx 3upx;}
+.stamp01:before{background-color:#50ADD3;}
+.stamp02{background: #ccc;background: radial-gradient(transparent 0, transparent 5upx, #ccc 5upx);background-size: 15upx 15upx;background-position: 9upx 3upx;}
+.stamp02:before{background-color:#ccc;}
+.stamp03{background: #7EAB1E;background: radial-gradient(transparent 0, transparent 5upx, #7EAB1E 5upx);background-size: 15upx 15upx;background-position: 9upx 3upx;}
+.stamp03:before{background-color:#7EAB1E;}
+.stamp03 .copy{padding: 10upx 6upx 10upx 12upx;font-size: 24upx;}
+.stamp03 .copy p{font-size: 14upx;margin-top: 5upx;margin-bottom: 8upx;}
+.stamp03 .copy a{background-color:#fff;color:#333;font-size: 14upx;text-decoration:none;padding:5upx 10upx;border-radius:3upx;display: block;}
+.stamp04{width: 390upx;background: #50ADD3;background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 4upx, #50ADD3 4upx);background-size: 12upx 8upx;background-position: -5upx 10upx;}
+.stamp04:before{background-color:#50ADD3;left: 5upx;right: 5upx;}
+.stamp04 .copy{padding: 10upx 6upx 10upx 12upx;font-size: 24upx;}
+.stamp04 .copy p{font-size: 14upx;margin-top: 5upx;margin-bottom: 8upx;}
+.stamp04 .copy a{background-color:#fff;color:#333;font-size: 14upx;text-decoration:none;padding:5upx 10upx;border-radius:3upx;display: block;}

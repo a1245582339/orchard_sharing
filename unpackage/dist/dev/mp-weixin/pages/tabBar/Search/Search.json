@@ -2,6 +2,10 @@
   "navigationBarTitleText": "搜索",
   "usingComponents": {
     "van-search": "/wxcomponents/vant/dist/search/index",
-    "uni-drawer": "/components/uni-drawer/uni-drawer"
+    "van-card": "/wxcomponents/vant/dist/card/index",
+    "van-icon": "/wxcomponents/vant/dist/icon/index",
+    "van-rate": "/wxcomponents/vant/dist/rate/index",
+    "uni-drawer": "/components/uni-drawer/uni-drawer",
+    "uni-load-more": "/components/uni-load-more/uni-load-more"
   }
 }

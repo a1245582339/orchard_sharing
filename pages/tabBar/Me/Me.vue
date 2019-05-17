@@ -1,16 +1,90 @@
 <template>
 	<view class="uni-padding-wrap uni-common-pb">
-		<view>
-			template
+		<view class="user">
+			<image class="avatar" :src="userInfo.avatarUrl || '../../../static/nologin.png'" mode=""></image>
+			<view class="name">
+				<text v-if="userInfo.nickName">{{userInfo.nickName}}</text>
+				<button v-else size="mini" type="default" open-type="getUserInfo" @getuserinfo="mpGetUserInfo">请先登录</button>
+			</view>
+		</view>
+		<view v-if="userInfo.nickName" class="menu">
+			<navigator url="/pages/tabBar/Me/Coupon" navigate hover-class="other-navigator-hover">
+				<view class="menu-item">
+					<view class="icon">
+						<van-icon name="coupon-o" />
+					</view>
+					<text class="label">优惠券</text>
+				</view>
+			</navigator>
+			<navigator url="/pages/tabBar/Me/Point" navigate hover-class="other-navigator-hover">
+				<view class="menu-item border">
+					<view class="icon">
+						<van-icon name="balance-o" />
+					</view>
+					<text class="label">积分</text>
+				</view>
+			</navigator>
+			<navigator url="/pages/tabBar/Me/Pending" navigate hover-class="other-navigator-hover">
+				<view class="menu-item">
+					<view class="icon">
+						<van-icon name="pending-payment" />
+					</view>
+					<text class="label">已预定</text>
+				</view>
+			</navigator>
+			<navigator url="/pages/tabBar/Me/Paid" navigate hover-class="other-navigator-hover">
+				<view class="menu-item">
+					<view class="icon">
+						<van-icon name="paid" />
+					</view>
+					<text class="label">待发货</text>
+				</view>
+			</navigator>
+			<navigator url="/pages/tabBar/Me/Logistics" navigate hover-class="other-navigator-hover">
+				<view class="menu-item">
+					<view class="icon">
+						<van-icon name="logistics" />
+					</view>
+					<text class="label">待收货</text>
+				</view>
+			</navigator>
+			<navigator url="/pages/tabBar/Me/Order" navigate hover-class="other-navigator-hover">
+				<view class="menu-item">
+					<view class="icon">
+						<van-icon name="orders-o" />
+					</view>
+					<text class="label">全部订单</text>
+				</view>
+			</navigator>
+		</view>
+		<view v-if="userInfo.nickName" class="list">
+			<uni-list>
+				<uni-list-item title="我的地址" @click="toLink('Me/Address')"></uni-list-item>
+				<uni-list-item title="我的收藏" @click="toLink('Me/Collection')"></uni-list-item>
+				<uni-list-item title="历史浏览" @click="toLink('Me/History')"></uni-list-item>
+				<uni-list-item title="冠名的树" @click="toLink('Home/Game')"></uni-list-item>
+			</uni-list>
 		</view>
 	</view>
 </template>
 <script>
+	import uniList from '@/components/uni-list/uni-list.vue'
+	import uniListItem from '@/components/uni-list-item/uni-list-item.vue'
 	export default {
+		components: {
+			uniList,
+			uniListItem
+		},
 		data() {
 			return {
-				
+				loginStatus: false,
+				userInfo: {
+					
+				}
 			}
+		},
+		created () {
+			
 		},
 		onLoad() {
 			// #ifdef APP-PLUS
@@ -28,50 +102,64 @@
 			});
 		},
 		methods: {
-			triggerCollapse(e) {
-				if (!this.lists[e].pages) {
-					this.goDetailPage(this.lists[e].url);
+			mpGetUserInfo (result) {
+				console.log('mpGetUserInfo', result.detail.userInfo);
+				if (result.detail.errMsg !== 'getUserInfo:ok') {
+					uni.showModal({
+						title: '获取用户信息失败',
+						content: '错误原因' + result.detail.errMsg,
+						showCancel: false
+					});
 					return;
 				}
-				for (var i = 0; i < this.lists.length; ++i) {
-					if (e === i) {
-						this.lists[i].open = !this.lists[e].open;
-					} else {
-						this.lists[i].open = false;
-					}
-				}
+				this.hasUserInfo = true;
+				this.userInfo = result.detail.userInfo;
 			},
-			goDetailPage(e) {
-				let path = e.url ? e.url : e;
-				let url = ~path.indexOf('platform') ? path : '/pages/template/' + path + '/' + path;
+			toLink (url) {
 				uni.navigateTo({
-					url: url
+					url: '/pages/tabBar/' + url
 				});
-				return false;
 			}
 		}
 	}
 </script>
 
-<style>
-	page {
-		height: auto;
-		min-height: 100%;
+<style lang="less">
+	.user {
+		display: flex;
+		align-items: center;
+		margin-top: 20upx;
+		padding: 10upx 20upx;
+		.avatar {
+			width: 150upx;
+			height: 150upx;
+			border-radius: 50%;
+		}
+		.name {
+			margin-left: 70upx
+		}
 	}
-
-	.uni-card {
-		box-shadow: none;
+	.menu {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 100upx;
+		.menu-item {
+			height: 120upx;
+			width: 120upx;
+			text-align: center;
+			.icon {
+				color: #1ea7eb;
+				font-size: 50upx;
+			}
+			.label {
+				color: #555;
+			}
+		}
+		.menu-item.border {
+			border-right: 1px solid #ccc;
+		}
 	}
-
-	.uni-list:after {
-		height: 0;
-	}
-
-	.uni-list:before {
-		height: 0;
-	}
-
-	.uni-hello-text {
-		word-break: break-all;
+	.list {
+		margin-top: 50upx
 	}
 </style>

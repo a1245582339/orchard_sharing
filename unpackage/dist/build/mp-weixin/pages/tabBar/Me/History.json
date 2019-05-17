@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "历史浏览",
+  "usingComponents": {
+    "van-button": "/wxcomponents/vant/dist/button/index",
+    "van-cell": "/wxcomponents/vant/dist/cell/index",
+    "van-card": "/wxcomponents/vant/dist/card/index",
+    "van-icon": "/wxcomponents/vant/dist/icon/index",
+    "van-rate": "/wxcomponents/vant/dist/rate/index"
+  }
+}

@@ -4,8 +4,8 @@
 			"path": "pages/tabBar/Home/Home",
 			"style": {
 				"navigationBarTitleText": "共享果园",
-				"usingComponents" : {  
-				    "van-notice-bar": "/wxcomponents/vant/dist/notice-bar/index",
+				"usingComponents": {
+					"van-notice-bar": "/wxcomponents/vant/dist/notice-bar/index",
 					"van-panel": "/wxcomponents/vant/dist/panel/index"
 				},
 				"app-plus": {
@@ -24,8 +24,10 @@
 			"path": "pages/tabBar/Recommend/Recommend",
 			"style": {
 				"navigationBarTitleText": "推荐",
-				"usingComponents" : {  
-				   "van-search": "/wxcomponents/vant/dist/search/index"  
+				"usingComponents": {
+					"van-card": "/wxcomponents/vant/dist/card/index",
+					"van-icon": "/wxcomponents/vant/dist/icon/index",
+					"van-rate": "/wxcomponents/vant/dist/rate/index"
 				},
 				"app-plus": {
 					"titleNView": {
@@ -42,9 +44,12 @@
 		{
 			"path": "pages/tabBar/Search/Search",
 			"style": {
-				"usingComponents" : {  
-			   "van-search": "/wxcomponents/vant/dist/search/index"  
-			},
+				"usingComponents": {
+					"van-search": "/wxcomponents/vant/dist/search/index",
+					"van-card": "/wxcomponents/vant/dist/card/index",
+					"van-icon": "/wxcomponents/vant/dist/icon/index",
+					"van-rate": "/wxcomponents/vant/dist/rate/index"
+				},
 				"navigationBarTitleText": "搜索",
 				"app-plus": {
 					"titleNView": {
@@ -56,13 +61,14 @@
 						}]
 					}
 				}
-			}}, 
+			}
+		},
 		{
 			"path": "pages/tabBar/Me/Me",
 			"style": {
 				"navigationBarTitleText": "个人中心",
-				"usingComponents" : {  
-				   "van-search": "/wxcomponents/vant/dist/search/index"  
+				"usingComponents": {
+					"van-icon": "/wxcomponents/vant/dist/icon/index"
 				},
 				"app-plus": {
 					"titleNView": {
@@ -75,6 +81,156 @@
 					}
 				}
 			}
+		},
+		{
+			"path": "pages/tabBar/Home/article/art1",
+			"style": {
+				"navigationBarTitleText": "给爱吃水果的你一份水果应季时令表"
+			}
+		},
+		{
+			"path": "pages/tabBar/Home/article/art2",
+			"style": {
+				"navigationBarTitleText": "水果养生小常识"
+			}
+		},
+		{
+			"path": "pages/tabBar/Home/Game",
+			"style": {
+				"navigationBarTitleText": "我的树"
+			}
+		},
+		{
+			"path": "pages/tabBar/Me/Coupon",
+			"style": {
+				"navigationBarTitleText": "我的优惠券",
+				"usingComponents": {
+					"van-tab": "/wxcomponents/vant/dist/tab/index",
+					"van-tabs": "/wxcomponents/vant/dist/tabs/index"
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/Me/Point",
+			"style": {
+				"navigationBarTitleText": "我的积分",
+				"usingComponents": {
+					"van-button": "/wxcomponents/vant/dist/button/index",
+					"van-icon": "/wxcomponents/vant/dist/icon/index",
+					"van-toast": "/wxcomponents/vant/dist/toast/index",
+					"van-cell": "/wxcomponents/vant/dist/cell/index",
+					"van-cell-group": "/wxcomponents/vant/dist/cell-group/index"
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/Me/Pending",
+			"style": {
+				"navigationBarTitleText": "已预定",
+				"usingComponents": {
+					"van-button": "/wxcomponents/vant/dist/button/index",
+					"van-cell": "/wxcomponents/vant/dist/cell/index",
+					"van-card": "/wxcomponents/vant/dist/card/index"
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/Me/Paid",
+			"style": {
+				"navigationBarTitleText": "待发货",
+				"usingComponents": {
+					"van-button": "/wxcomponents/vant/dist/button/index",
+					"van-cell": "/wxcomponents/vant/dist/cell/index",
+					"van-card": "/wxcomponents/vant/dist/card/index"
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/Me/Logistics",
+			"style": {
+				"navigationBarTitleText": "待收货",
+				"usingComponents": {
+					"van-button": "/wxcomponents/vant/dist/button/index",
+					"van-cell": "/wxcomponents/vant/dist/cell/index",
+					"van-card": "/wxcomponents/vant/dist/card/index"
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/Me/Order",
+			"style": {
+				"navigationBarTitleText": "全部订单",
+				"usingComponents": {
+					"van-button": "/wxcomponents/vant/dist/button/index",
+					"van-cell": "/wxcomponents/vant/dist/cell/index",
+					"van-card": "/wxcomponents/vant/dist/card/index",
+					"van-tab": "/wxcomponents/vant/dist/tab/index",
+					"van-tabs": "/wxcomponents/vant/dist/tabs/index"
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/Me/Address",
+			"style": {
+				"navigationBarTitleText": "我的地址",
+				"usingComponents": {
+					"van-button": "/wxcomponents/vant/dist/button/index",
+					"van-cell": "/wxcomponents/vant/dist/cell/index",
+					"van-tag": "/wxcomponents/vant/dist/tag/index",
+					"van-dialog": "/wxcomponents/vant/dist/dialog/index"
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/Me/AddressDetail",
+			"style": {
+				"navigationBarTitleText": "我的地址",
+				"usingComponents": {
+					"van-field": "/wxcomponents/vant/dist/field/index",
+					"van-button": "/wxcomponents/vant/dist/button/index",
+					"van-cell": "/wxcomponents/vant/dist/cell/index",
+					"van-dialog": "/wxcomponents/vant/dist/dialog/index",
+					"van-picker": "/wxcomponents/vant/dist/picker/index",
+					"van-toast": "/wxcomponents/vant/dist/toast/index"
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/Me/Collection",
+			"style": {
+				"navigationBarTitleText": "我的收藏",
+				"usingComponents": {
+					"van-button": "/wxcomponents/vant/dist/button/index",
+					"van-card": "/wxcomponents/vant/dist/card/index",
+					"van-icon": "/wxcomponents/vant/dist/icon/index",
+					"van-rate": "/wxcomponents/vant/dist/rate/index"
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/Me/History",
+			"style": {
+				"navigationBarTitleText": "历史浏览",
+				"usingComponents": {
+					"van-button": "/wxcomponents/vant/dist/button/index",
+					"van-cell": "/wxcomponents/vant/dist/cell/index",
+					"van-card": "/wxcomponents/vant/dist/card/index",
+					"van-icon": "/wxcomponents/vant/dist/icon/index",
+					"van-rate": "/wxcomponents/vant/dist/rate/index"
+				}
+			}
+		}, {
+			"path": "pages/Shop/Shop",
+			"style": {
+				"navigationBarTitleText": "店铺详情",
+				"usingComponents": {
+					"van-cell": "/wxcomponents/vant/dist/cell/index",
+					"van-rate": "/wxcomponents/vant/dist/rate/index",
+					"van-icon": "/wxcomponents/vant/dist/icon/index",
+					"van-card": "/wxcomponents/vant/dist/card/index",
+					"van-tag": "/wxcomponents/vant/dist/tag/index"
+				}
+			}
 		}
 	],
 	"globalStyle": {
@@ -84,33 +240,33 @@
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
-			"color": "#7A7E83",
-			"selectedColor": "#007AFF",
-			"borderStyle": "black",
-			"backgroundColor": "#F8F8F8",
-			"list": [{
-					"pagePath": "pages/tabBar/Home/Home",
-					"iconPath": "static/home.png",
-					"selectedIconPath": "static/homeS.png",
-					"text": "首页"
-				},
-				{
-					"pagePath": "pages/tabBar/Recommend/Recommend",
-					"iconPath": "static/recommend.png",
-					"selectedIconPath": "static/recommendS.png",
-					"text": "推荐"
-				}, {
-					"pagePath": "pages/tabBar/Search/Search",
-					"iconPath": "static/search.png",
-					"selectedIconPath": "static/searchS.png",
-					"text": "搜索"
-				}, {
-					"pagePath": "pages/tabBar/Me/Me",
-					"iconPath": "static/me.png",
-					"selectedIconPath": "static/meS.png",
-					"text": "个人中心"
-				}
-			]
-		}
-	
+		"color": "#7A7E83",
+		"selectedColor": "#007AFF",
+		"borderStyle": "black",
+		"backgroundColor": "#F8F8F8",
+		"list": [{
+				"pagePath": "pages/tabBar/Home/Home",
+				"iconPath": "static/home.png",
+				"selectedIconPath": "static/homeS.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/tabBar/Recommend/Recommend",
+				"iconPath": "static/recommend.png",
+				"selectedIconPath": "static/recommendS.png",
+				"text": "推荐"
+			}, {
+				"pagePath": "pages/tabBar/Search/Search",
+				"iconPath": "static/search.png",
+				"selectedIconPath": "static/searchS.png",
+				"text": "搜索"
+			}, {
+				"pagePath": "pages/tabBar/Me/Me",
+				"iconPath": "static/me.png",
+				"selectedIconPath": "static/meS.png",
+				"text": "个人中心"
+			}
+		]
+	}
+
 }
